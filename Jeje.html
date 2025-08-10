@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Filter Produk</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f8f8ff;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .filter-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .filter-buttons button {
+      padding: 8px 16px;
+      border: none;
+      background-color: #fff;
+      color: #333;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .filter-buttons button.active {
+      background-color: #85adad;
+      color: #fff;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.02);
+    }
+
+    .product-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .product-link img {
+      width: 96%;
+      height: 140px;
+      border-radius:10px;
+      margin-left:3px;
+      margin-top:6px;
+      
+    }
+
+    .info {
+      padding: 10px;
+      color:#404040;
+    }
+
+    .info h3 {
+      font-size: 16px;
+      margin: 0 0 5px;
+    }
+
+    .info p {
+      font-size: 12px;
+      color: #666;
+      margin: 0;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="filter-buttons">
+    <button class="active" onclick="filterSelection('all', this)">Show all</button>
+    <button onclick="filterSelection('Pengecatan', this)">Elektronik</button>
+    <button onclick="filterSelection('Atap', this)">Plumbing</button>
+    <button onclick="filterSelection('listrik', this)">Listrik</button>
+    <button onclick="filterSelection('scurity', this)">Scurity</button>
+  </div>
+
+  <div class="products">
+    <div class="product-card Pengecatan Dinding Beton Partisi">
+      <a href="action://p/6547e883401ef" class="product-link">
+        <img src="https://i.imghippo.com/files/INT1360G.jpg" alt="Cat Stucco" />
+        <div class="info">
+          <h3>Ac</h3>
+          <p>Service,Cuci,Instalasi</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="product-card Pengecatan Kitchen">
+      <a href="action://p/68055b323086a" class="product-link">
+        <img src="https://i.imghippo.com/files/eGz7903hWg.jpg" alt="Cat Duco" />
+        <div class="info">
+          <h3>TV</h3>
+          <p>Instalasi,Service</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="product-card Pengecatan Dinding ">
+      <a href="action://p/648494cc9afd4" class="product-link">
+        <img src="https://i.imghippo.com/files/Rlbi3530vD.jpg" alt="Cat Interior" />
+        <div class="info">
+          <h3>AC Baru</h3>
+          <p> Daikin,Panasonic,Gree</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="product-card Pengecatan Dinding ">
+      <a href="action://p/6812a7ffa1a0e" class="product-link">
+        <img src="https://i.imghippo.com/files/yEp1204KV.jpg" alt="Mural" />
+        <div class="info">
+          <h3>Service Electronic</h3>
+          <p>Ac,Kulkas,Mesin Cuci</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="product-card scurity">
+      <a href="action://p/680ac2f8d0090" class="product-link">
+        <img src="https://i.imghippo.com/files/msT5579Miw.jpg" alt="Taman" />
+        <div class="info">
+          <h3>Smart Door Lock</h3>
+          <p>Instalsi,Service</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="product-card scurity">
+      <a href="https://jgjk.mobi/f/6808d5c81343b" class="product-link">
+        <img src="https://i.imghippo.com/files/toU9252dqU.jpg" alt="Lantai" />
+        <div class="info">
+          <h3>CCTV</h3>
+          <p>Instalasi,Service</p>
+        </div>
+      </a>
+    </div>
+    
+
+    <div class="product-card Atap">
+      <a href="action://p/6805798c92b7e" class="product-link">
+        <img src="https://i.imghippo.com/files/hTJP3333M.jpg" alt="Atap" />
+        <div class="info">
+          <h3>Water Heater</h3>
+          <p>Instalasi,Service</p>
+        </div>
+      </a>
+    </div>
+  
+           <div class="product-card Atap">
+      <a href="action://p/68082a4b1478a" class="product-link">
+        <img src="https://i.imghippo.com/files/gdV3799lOU.webp" alt="Atap" />
+        <div class="info">
+          <h3>Sanitary</h3>
+          <p>Closed,Wastafel,Pipa</p>
+        </div>
+      </a>
+    </div>
+  
+      <div class="product-card Atap">
+      <a href="action://p/68138aa6b1561" class="product-link">
+        <img src="https://i.imghippo.com/files/PpB3349ftg.jpg" alt="Atap" />
+        <div class="info">
+          <h3>Sumur Bor</h3>
+          <p>Instalsi,Service</p>
+        </div>
+      </a>
+    </div>
+  
+  
+      <div class="product-card Atap">
+      <a href="action://p/6812b20b7a4ee" class="product-link">
+        <img src="https://i.imghippo.com/files/shj3388SeI.jpg" alt="Atap" />
+        <div class="info">
+          <h3>Sedot WC</h3>
+          <p>Got,Spitank,</p>
+        </div>
+      </a>
+    </div>
+  
+        <div class="product-card listrik">
+      <a href="action://p/6804bdeb1e055" class="product-link">
+        <img src="https://i.imghippo.com/files/CPgb6951pQ.jpg" alt="Atap" />
+        <div class="info">
+          <h3>Jasa Instalasi</h3>
+          <p>Saklar,Lampu,Stop Kontak</p>
+        </div>
+      </a>
+    </div>
+  
+          <div class="product-card listrik">
+      <a href="action://p/68077f914d7fc" class="product-link">
+        <img src="https://i.imghippo.com/files/NAzy5484ANs.jpg" alt="Atap" />
+        <div class="info">
+          <h3>Pemasangan Perangkat</h3>
+          <p>Saklar,Lampu,Stop Kontak</p>
+        </div>
+      </a>
+    </div>
+  
+
+  <script>
+    function filterSelection(category, btn) {
+      const cards = document.querySelectorAll('.product-card');
+      const buttons = document.querySelectorAll('.filter-buttons button');
+
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      if (category === 'all') {
+        cards.forEach(c => c.classList.remove('hidden'));
+      } else {
+        cards.forEach(c => {
+          c.classList.add('hidden');
+          if (c.classList.contains(category)) {
+            c.classList.remove('hidden');
+          }
+        });
+      }
+    }
+  </script>
+
+</body>
+</html>
